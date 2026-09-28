@@ -37,15 +37,10 @@ a{
     color: white;
 }
 
-h2{
+h2, h3, p{
     text-align: center;
-    margin-top: 60px;
-    scroll-margin-top: 60px;
 }
 
-p{
-    text-align: center;
-}
 
 .header-container {
     text-align: center;
@@ -55,7 +50,7 @@ p{
 .floating-text {
     text-align: center;
     display: inline-block;
-    animation: float 4s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -70,10 +65,11 @@ p{
 
 
 .flex-cards {
-  display: flex;
-  gap: 20px; /* Space between the two cards */
-  flex-wrap: wrap; /* Allows cards to stack on smaller screens */
-  justify-content: center;
+    display: flex;
+    gap: 20px; /* Space between the two cards */
+    flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+    justify-content: center;
+    perspective: 1000px;
 }
 
 .flex-cards .glass-card {
@@ -85,3 +81,25 @@ p{
   backdrop-filter: blur(12px);
   color: #ffffff;
 }
+
+.rot {
+    text-align: center;
+    display: inline-block;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+
+
+
+
