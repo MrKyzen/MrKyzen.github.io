@@ -11,12 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="margin: 0; padding: 0;">
     
     <video playsinline autoplay loop muted id="bgvid">
-    <source src="vids/background.mp4" type="video/mp4">
+    <source src="vids/bg.mp4" type="video/mp4">
     Your browser does not support the video tag
     </video>
+
+    <!-- The audio element (Visible but shrunk so the browser permits autoplay) -->
+    <audio id="bg-audio" autoplay loop muted class="Audio" style="display:none;">
+        <source src="aud/Faded (Instrumental).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- The fixed button with inline controls -->
+    <button id="playPauseBtn" 
+        onclick="var a=document.getElementById('bg-audio'); 
+            if(a.paused || a.muted)
+                { a.muted=false; a.play(); this.textContent='Pause'; }
+            else 
+                { a.pause(); this.textContent='Play'; }" 
+
+        style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 0px; cursor:default; border-radius: 50%; height:50px; width: 50px; align-items: center; justify-content: center; text-align:center;">
+        Play
+    </button>
+
 
 
 
@@ -41,7 +60,7 @@
             </h3>
         </div>
         <div class="floating-text">
-            <img src="img/favicon.png" alt="MrKyzen logo" border-radius="50%" style="border-radius: 50%; width: 200px; height: 200px; display: block; margin-left: auto; margin-right: auto; box-shadow: 0 0 15px rgba(255, 255, 255, 0.801);" class="rot">
+            <img src="img/favicon.png" alt="MrKyzen logo" border-radius="50%" style="border-radius: 50%; width: 200px; height: 200px; display: block; margin-left: auto; margin-right: auto; box-shadow: 0 0 15px rgba(255, 255, 255, 0.801); perspective: 1000px;;" class="rot">
         </div>
     </div>
 
@@ -49,7 +68,7 @@
 
 
 
-    <div class="flex-cards" id="about" style="margin-top: 20%; margin-bottom: 30px; scroll-margin-top: 100px; gap: 100px;">
+    <div class="flex-cards" id="about" style="margin-top: 20%; margin-bottom: 30px; scroll-margin-top: 100px; gap: 100px; margin:20px">
     <!-- Card 1 -->
         <div class="glass-card">
         <h3>Who am i actually?</h3>
@@ -71,7 +90,7 @@
         <img src="img/free-java-logo-icon-svg-download-png-1720088.png" alt="Java logo" style="width: 100px; height: 100px;" class="floating-text">
     </div>
 
-    <div class="flex-cards">
+    <div class="flex-cards" style="margin:20px;">
         <div class="glass-card">
             <h3>What are my interests?</h3>
             <p>Well, aside from coding, I enjoy playing video games and reading books.</p>
@@ -82,18 +101,59 @@
         </div>
     </div>
 
-    <div class="flex-cards" style="margin-top: 50px; margin-bottom: 30px;">
-        <div class="glass-card" style="height:200px">
+    <div class="flex-cards" style="margin-top: 80px; margin-bottom: 30px; margin-left:20px; margin-right:20px;">
+        <div class="glass-card" style="height:400px;">
             <h3>What games do I play?</h3>
-            <p>My most played games are MechArena and Valorant.</p>
+            <p>My most played games are MechArena and Valorant. I also like playing other games.</p>
+            <p>My favorite game is Valorant.</p>
+            <p>My Valorant ID is MrKyzen#6401</p>
+            <p>My MechArena ID is 96059831 , MrKyzen</p>
         </div>
         <div>
             <img src="img/yoru.png" alt="Yoru from Valorant" style=" max-width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" class="floating-text">
+        </div>
+        <div class="glass-card" >
+            <h3>What is my favorite character in Valorant?</h3>
+            <p>My favorite character in Valorant is Yoru(you can see him in the image above).</p>
+        </div>
+    </div>
+
+
+    <div style="margin-top: 100px; align-items:center; justify-content:center; display:flex; flex-direction:column;">
+        <h2 style="text-align: center; text-shadow: 0 0 15px rgba(255, 255, 255, 0.801);"  class="floating-text">My Projects</h2>
+    </div>
+
+
+    <div class="flex-cards" style="margin-top: 50px; margin-bottom: 30px; width: 70%; align-items: center; justify-content: center; display: flex; flex-direction: column; margin-left: auto; margin-right: auto;">
+        <div class="glass-card" style="align-items: center;">
+            <h3>What kind of porjects I do?</h3>
+            <p>I do projects related to programming, web development and game development.</p>
+            <p>My projects are mostly small and simple(really simple).</p>
+            <p>My projects are mostly made for learning purposes.</p>
+            <br>
+            <p>Projects coming soon</p>
         </div>
     </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer style="text-align: center; padding: 20px; background-color: rgba(0, 0, 0, 1); color: white;">
+        <span>2026 MrKyzen. All rights reserved.</span>
+    </footer>
 
 
 

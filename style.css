@@ -1,6 +1,7 @@
 body{
     color: white;
     font-family: 'Edu QLD Hand', cursive;
+    cursor:default;
 }
 
 #bgvid{
@@ -70,12 +71,15 @@ h2, h3, p{
     flex-wrap: wrap; /* Allows cards to stack on smaller screens */
     justify-content: center;
     perspective: 1000px;
+    cursor:default;
+    align-items: center;
+
 }
 
 .flex-cards .glass-card {
   flex: 1 1 300px; /* Takes equal space, minimum width 300px */
   background: rgba(15, 12, 29, 0.5);
-  border: 1px solid rgba(244, 114, 182, 0.25);
+  border: 1px solid rgba(138, 114, 244, 0.25);
   border-radius: 16px;
   padding: 25px;
   backdrop-filter: blur(12px);
@@ -96,9 +100,6 @@ h2, h3, p{
         transform: rotateY(360deg);
     }
 }
-
-
-
 
 
 
