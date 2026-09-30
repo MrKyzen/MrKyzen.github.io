@@ -1,6 +1,12 @@
+html{
+     scroll-behavior: smooth; 
+}
+
+
+
 body{
     color: white;
-    font-family: 'Arial', serif;
+    font-family: "Roboto", sans-serif;
     cursor:default;
 }
 
@@ -40,6 +46,19 @@ a{
 
 h2, h3, p{
     text-align: center;
+}
+
+
+#home {
+    margin-bottom: 30px; 
+    gap: 100px; 
+    padding-top:30vh;
+    padding-bottom:40vh;
+    border:0;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    backdrop-filter: blur(3px);
 }
 
 
@@ -104,3 +123,39 @@ h2, h3, p{
 
 
 
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.changing-text {
+  display: block;
+  overflow: hidden;
+  animation: changeText 0.5s infinite;
+  min-width: 120px; /* Adjust based on your longest word, e.g., "Developer" */
+}
+
+@keyframes changeText {
+    
+    0% {
+        font-family: "Roboto", sans-serif ;
+    }
+    25% {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    50% {
+        font-family: "Georgia", serif;
+    }
+    75% {
+        font-family: "Arial", sans-serif;
+    }
+
+    
+}
